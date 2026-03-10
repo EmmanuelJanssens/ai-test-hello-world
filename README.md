@@ -9,7 +9,13 @@ ai-test-hello-world/
 ├── README.md
 ├── scripts/
 │   ├── quicksort.sh
-│   └── remove-dup.sh
+│   ├── quicksort_test.sh
+│   ├── merge_sort.sh
+│   ├── merge_sort_test.sh
+│   ├── remove-dup.sh
+│   ├── remove-dup_test.sh
+│   ├── count.sh
+│   └── count_test.sh
 ├── javascript/
 │   └── main.js
 └── python/
@@ -92,6 +98,60 @@ A passing run will look like:
 PASS: Basic sorting (positive integers)
 PASS: Mixed positive and negative numbers
 PASS: Duplicate values and reverse-sorted input
+
+Results: 3 passed, 0 failed.
+```
+
+## Merge Sort Bash
+
+Sorts a list of integers using the Merge Sort algorithm. Merge sort runs in O(n log n) time and is a stable sort, meaning equal elements preserve their original order.
+
+**Prerequisites:** Bash must be available on your system. It is standard on Linux and macOS. Windows users can use [Git Bash](https://git-scm.com/) or [WSL](https://learn.microsoft.com/en-us/windows/wsl/).
+
+Before running the script for the first time, make sure it has execute permissions:
+
+```bash
+chmod +x scripts/merge_sort.sh
+```
+
+**Usage:**
+
+```bash
+./scripts/merge_sort.sh 5 3 8 1 2
+./scripts/merge_sort.sh 10 -3 7 0 -1
+./scripts/merge_sort.sh -- -5 3 1 -2
+```
+
+> **Note:** Use the `--` separator before negative numbers to prevent them from being interpreted as flags (e.g. `./scripts/merge_sort.sh -- -5 3 1 -2`).
+
+For help and usage information, run:
+
+```bash
+./scripts/merge_sort.sh --help
+```
+
+## Merge Sort Tests
+
+A small test suite is provided to verify the merge sort script against three high-value scenarios: basic sorting, mixed positive/negative numbers, and duplicate values.
+
+Before running the tests for the first time, make sure the test script has execute permissions:
+
+```bash
+chmod +x scripts/merge_sort_test.sh
+```
+
+Run all tests from the project root:
+
+```bash
+./scripts/merge_sort_test.sh
+```
+
+A passing run will look like:
+
+```
+PASS: Basic sorting (positive integers)
+PASS: Mixed positive and negative numbers
+PASS: Duplicate values and already-sorted input
 
 Results: 3 passed, 0 failed.
 ```
