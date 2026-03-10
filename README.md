@@ -120,3 +120,55 @@ For help and usage information, run:
 ```bash
 ./scripts/remove-dup.sh --help
 ```
+
+## Count Words Bash
+
+Counts the frequency of each word in the provided arguments, outputting results in first-occurrence order.
+
+**Prerequisites:** Bash >= 4.0 must be available on your system. It is standard on Linux. macOS users should verify their Bash version with `bash --version` (macOS ships Bash 3.2 by default; install a newer version via [Homebrew](https://brew.sh/)). Windows users can use [Git Bash](https://git-scm.com/) or [WSL](https://learn.microsoft.com/en-us/windows/wsl/)).
+
+Before running the script for the first time, make sure it has execute permissions:
+
+```bash
+chmod +x scripts/count.sh
+```
+
+**Usage:**
+
+```bash
+./scripts/count.sh how many apples are in the apple tree
+./scripts/count.sh the cat sat on the mat
+```
+
+> **Note:** Comparison is case-insensitive (e.g. `Apple` and `apple` are counted together). Punctuation and special characters are stripped from words before counting.
+
+For help and usage information, run:
+
+```bash
+./scripts/count.sh --help
+```
+
+## Count Tests
+
+A small test suite is provided to verify the count script against two high-value scenarios: basic word counting and case-insensitive counting with punctuation stripping.
+
+Before running the tests for the first time, make sure the test script has execute permissions:
+
+```bash
+chmod +x scripts/count_test.sh
+```
+
+Run all tests from the project root:
+
+```bash
+./scripts/count_test.sh
+```
+
+A passing run will look like:
+
+```
+PASS: Basic word count (task description example)
+PASS: Case-insensitive duplicates and punctuation stripping
+
+Results: 2 passed, 0 failed.
+```
