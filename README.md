@@ -70,6 +70,32 @@ For help and usage information, run:
 ./scripts/quicksort.sh --help
 ```
 
+## QuickSort Tests
+
+A small test suite is provided to verify the quicksort script against three high-value scenarios: basic sorting, mixed positive/negative numbers, and duplicate values.
+
+Before running the tests for the first time, make sure the test script has execute permissions:
+
+```bash
+chmod +x scripts/quicksort_test.sh
+```
+
+Run all tests from the project root:
+
+```bash
+./scripts/quicksort_test.sh
+```
+
+A passing run will look like:
+
+```
+PASS: Basic sorting (positive integers)
+PASS: Mixed positive and negative numbers
+PASS: Duplicate values and reverse-sorted input
+
+Results: 3 passed, 0 failed.
+```
+
 ## Remove Duplicates Bash
 
 Removes duplicate strings from a list, preserving first-occurrence order.
