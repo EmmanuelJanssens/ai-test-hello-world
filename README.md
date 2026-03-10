@@ -8,6 +8,7 @@ A simple project demonstrating "Hello World" programs in JavaScript and Python, 
 ai-test-hello-world/
 ├── README.md
 ├── quicksort.sh
+├── remove-dup.sh
 ├── javascript/
 │   └── main.js
 └── python/
@@ -66,4 +67,29 @@ For help and usage information, run:
 
 ```bash
 ./quicksort.sh --help
+```
+
+## Remove Duplicates Bash
+
+Removes duplicate strings from a list, preserving first-occurrence order.
+
+**Prerequisites:** Bash >= 4.0 must be available on your system. It is standard on Linux. macOS users should verify their Bash version with `bash --version` (macOS ships Bash 3.2 by default; install a newer version via [Homebrew](https://brew.sh/)). Windows users can use [Git Bash](https://git-scm.com/) or [WSL](https://learn.microsoft.com/en-us/windows/wsl/).
+
+Before running the script for the first time, make sure it has execute permissions:
+
+```bash
+chmod +x remove-dup.sh
+```
+
+**Usage:**
+
+```bash
+./remove-dup.sh banana banana apple pear
+./remove-dup.sh a b a c b d
+```
+
+For help and usage information, run:
+
+```bash
+./remove-dup.sh --help
 ```
