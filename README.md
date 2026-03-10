@@ -7,8 +7,9 @@ A simple project demonstrating "Hello World" programs in JavaScript and Python, 
 ```
 ai-test-hello-world/
 ├── README.md
-├── quicksort.sh
-├── remove-dup.sh
+├── scripts/
+│   ├── quicksort.sh
+│   └── remove-dup.sh
 ├── javascript/
 │   └── main.js
 └── python/
@@ -50,23 +51,23 @@ Sorts a list of integers using the QuickSort algorithm.
 Before running the script for the first time, make sure it has execute permissions:
 
 ```bash
-chmod +x quicksort.sh
+chmod +x scripts/quicksort.sh
 ```
 
 **Usage:**
 
 ```bash
-./quicksort.sh 5 3 8 1 2
-./quicksort.sh 10 -3 7 0 -1
-./quicksort.sh -- -5 3 1 -2
+./scripts/quicksort.sh 5 3 8 1 2
+./scripts/quicksort.sh 10 -3 7 0 -1
+./scripts/quicksort.sh -- -5 3 1 -2
 ```
 
-> **Note:** Use the `--` separator before negative numbers to prevent them from being interpreted as flags (e.g. `./quicksort.sh -- -5 3 1 -2`).
+> **Note:** Use the `--` separator before negative numbers to prevent them from being interpreted as flags (e.g. `./scripts/quicksort.sh -- -5 3 1 -2`).
 
 For help and usage information, run:
 
 ```bash
-./quicksort.sh --help
+./scripts/quicksort.sh --help
 ```
 
 ## Remove Duplicates Bash
@@ -78,18 +79,18 @@ Removes duplicate strings from a list, preserving first-occurrence order.
 Before running the script for the first time, make sure it has execute permissions:
 
 ```bash
-chmod +x remove-dup.sh
+chmod +x scripts/remove-dup.sh
 ```
 
 **Usage:**
 
 ```bash
-./remove-dup.sh banana banana apple pear
-./remove-dup.sh a b a c b d
+./scripts/remove-dup.sh banana banana apple pear
+./scripts/remove-dup.sh a b a c b d
 ```
 
 For help and usage information, run:
 
 ```bash
-./remove-dup.sh --help
+./scripts/remove-dup.sh --help
 ```
