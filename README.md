@@ -15,7 +15,8 @@ ai-test-hello-world/
 │   ├── remove-dup.sh
 │   ├── remove-dup_test.sh
 │   ├── count.sh
-│   └── count_test.sh
+│   ├── count_test.sh
+│   └── random.sh
 ├── javascript/
 │   └── main.js
 └── python/
@@ -231,4 +232,32 @@ PASS: Basic word count (task description example)
 PASS: Case-insensitive duplicates and punctuation stripping
 
 Results: 2 passed, 0 failed.
+```
+
+## Random Integer Bash
+
+Generates a random integer between two bounds (inclusive).
+
+**Prerequisites:** Bash must be available on your system. It is standard on Linux and macOS. Windows users can use [Git Bash](https://git-scm.com/) or [WSL](https://learn.microsoft.com/en-us/windows/wsl/).
+
+Before running the script for the first time, make sure it has execute permissions:
+
+```bash
+chmod +x scripts/random.sh
+```
+
+**Usage:**
+
+```bash
+./scripts/random.sh 10 30
+./scripts/random.sh 1 100
+./scripts/random.sh -5 5
+```
+
+> **Note:** The script uses bash `$RANDOM` (range 0–32767), so it is suitable for small ranges only. Results may not be uniformly distributed for ranges larger than 32767.
+
+For help and usage information, run:
+
+```bash
+./scripts/random.sh --help
 ```
